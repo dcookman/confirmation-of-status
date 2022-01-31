@@ -1,0 +1,10 @@
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+confirmation_of_status_report_DMC.run.xml
+confirmation_of_status_report_DMC.synctex.gz
+confirmation_of_status_report_DMC.toc
