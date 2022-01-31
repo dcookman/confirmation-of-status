@@ -1,0 +1,37 @@
+% Style sheet for DPhil Confirmation of Status Report
+% (Nicked from May 2019 MPhys project report - many thanks Ynyr Harris!)
+
+\usepackage[top=2.54cm, bottom=2.54cm, left=2.75cm, right=2.75cm]{geometry}
+\usepackage{import}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{siunitx}
+\sisetup{separate-uncertainty = true, range-phrase = --, range-units = single, group-separator = {,}}
+% Useful temp packages
+\usepackage{xcolor}
+\usepackage{lipsum}
+% IEEE style citation:
+%\usepackage{cite}
+\usepackage{blindtext}
+%\newcommand{\citet}{\cite}
+\usepackage[
+    backend=biber,
+    maxnames=4,
+    style=phys,
+]{biblatex}
+%\bibliographystyle{ieeetr}
+%\setlength{\parindent}{0cm}
+
+% Figure formatting
+\usepackage[font=small]{caption}
+\usepackage{subcaption}
+%\usepackage[compat=1.1.0]{tikz-feynman} % Feynamn diagrams
+% Maths stuff
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{slashed} % Feynman slash, e.g. \slashed{E}_T
+\newcommand\brabar{\scalebox{.3}{(}\raisebox{-1.7pt}{$-$}\scalebox{.3}{)}}
+
+\setlength{\parskip}{6pt}

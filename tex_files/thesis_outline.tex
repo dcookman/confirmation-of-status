@@ -1,0 +1,44 @@
+\section{Thesis Outline}\label{sect:thesis_outline}
+\subsection{The Theory of Neutrino Physics}
+The purpose of this chapter is to: convince the reader that neutrino physics is indeed an exciting field worthy of contemporary study (especially neutrinoless double-beta decay), give some context to the SNO+ experiment and my work, and go over the theoretical underpinnings of the subject necessary for understanding my research.
+
+I shall start by giving a ``whistle-stop'' tour of the Standard Model (SM) of particle physics: the combination of Quantum Field Theory with non-Abelian gauge theories, and notably the Brout-Englert-Higgs Mechanism that ties everything together. I will cover the terms of the SM Lagrangian that contain neutrinos, and then describe how this gives rise to various properties of neutrinos. These include the three flavours of neutrino which couple to the weak force in both charged- and neutral-current forms. Experimental evidence supporting this model will be given.
+
+Major assumption of SM has been that neutrinos are massless --- I'll explain why direct coupling to the Higgs in the ``usual'' way is not possible. But, neutrino oscillations change all that. I will briefly cover the most popular solution to the question of neutrino mass, the see-saw mechanism (which can be of multiple varieties). This will link in to a discussion about the difference Dirac and Majorana models for neutrinos, as well as models for baryo- and lepto-genesis. Then, a description of neutrinoless double-beta decay will be made, and how the Black Box Theorem helps us. I will then mention the differing experimental approaches to searching for neutrinoless double-beta decay.
+
+After that, I will outline the history of measuring neutrino oscillations, starting with Homestake \& John Bahcall, but then moving onto more recent notable experiments. With these observations in hand, I will describe the current phenomenological model we use for neutrino oscillations: the PMNS matrix with the MSW effect in the LMA regime. I will give more focus on the theory behind solar neutrino oscillations, given my research work on solar analysis. The Standard Solar Model will be introduced, along with what has yet to be measured fully: the solar metallicity problem. I will describe why only two oscillation parameters can reasonably measured in a solar neutrino experiment, and how these measurements can be complementary to reactor anti-neutrino measurements.
+
+\subsection{The SNO+ Detector}
+This is the main detector chapter. I will start with an overview of the high-level detector overview, covering its geometry and standard coordinate axis. I will endeavour to explain why certain design choices were made that enable the experiment. This will include a section on how the liquid scintillator works, along with Cerenkov light.
+
+After the light from a physics event has been generated, it must then be detected. I will go into the details of the detector's TDAQ system: the PMT and concentrator design, how events trigger the detector, how information about raw PMT hit time and charge is then obtained via the electronics, and the building of an event from this information.
+
+With this raw data, we must perform low-level calibrations to clean the data. These include electronics and timing calibrations, the latter via the Laserball and TELLIE subsystems. PMT hardware and software checks are also made for data quality purposes (possibly described in more detail in an appendix).
+
+Calibration of the detector optics is needed to obtain an accurate model of our detector. This is done with a suite of optical calibration tools: SMELLIE, AMELLIE, and the Laserball. Calibration of our event reconstruction is achieved with a variety of radioactive sources, such as the AmBe and N16 sources.
+
+This leads into approaches to event reconstruction themselves: a brief description of how our energy, position, and direction fitters work, given that their results are being used for my solar analysis. I will also briefly discuss RAT, the collaboration's simulation and data analysis software.
+
+Finally for this chapter, I will describe the main experimental phases of the experiment, along with the physics plans for each (or what was achieved, as appropriate).
+
+\subsection{Optical Scattering Theory}
+Before we discuss calibrating the detector's optical scattering, we must first understand what it is as a physical phenomenon, and why it is important to understand. I will start by showing the impact of scattering on physics analyses, e.g. the influence on the hit-time spectrum.
+
+Then, I will move into the theoretical models for optical scattering in a fluid. We start with the Rayleigh scattering theory, which is devised for gases. The difference between Rayleigh and Mie scattering is discussed. This is expanded by the Einstein Smolokowsky density-fluctuation theory for materials. I will then look at how existing measurements of scattering compare to this theory, looking specifically at water and scintillator. Any limitations of the theory will be mentioned here, notably the impact of hydrogen bonding in water.
+
+Finally, I will describe how scattering is modelled in RAT for both the water and scintillator, and also the extent to which theoretical uncertainties described above impact my analysis.
+
+\subsection{The SMELLIE Calibration System}
+I will start this chapter by giving an overview for how the SMELLIE calibration system works: firing collimated laser light into the detector to observe scattering. Analysis is focused on measuring this scattering, ideally the double differential scattering cross-section as a function of wavelength and scattering angle. In addition, as the detector's optics changes through different phases of operation, SMELLIE can be used for monitoring purposes.
+
+I will then give a description of the hardware used for SMELLIE. This includes the laser heads (and the difference between them), and how light travels from them into the detector via various pieces of apparatus. Alongside the path of light is the triggering system: I will go over how the lasers get triggered, and then how the triggers then get sent onto the detector-wide triggering system. If the new hardware was able to be installed by myself and colleagues in the coming year, I will also give a description of these new tools, and why they were valuable to include.
+
+All of this hardware is controlled by software, and I will cover how this works at a high level. I will also cover how commissioning of the SMELLIE system works, and why it is necessary.
+
+\subsection{Simulating SMELLIE Events}
+This is the content covered in the main body of this report. Some final work need to be added to this section - one fibre's beam profile still needs to be generated, for example. This should take at most another month of time. Some details will be further expanded in the thesis version of this chapter, such as how a latching problem in the detector's electronics during the water-phase required using a certain `$t_2$ correction' method.
+
+\subsection{Scintillator-phase Scattering Analysis}
+\subsubsection{Extinction-length Analysis}
+A significant discrepancy between MC and data was observed in the number of photons observed at different PPO concentrations by others in the collaboration. This seems to be because of a change in the scintillator's extinction length from expectations at short wavelengths. This can be measured in-situ by SMELLIE! I will go over the details of how one could theoretically make this measurement of the scintillator's extinction length as a function of wavelength. Here is where any assumptions made in the subsequent analysis will be noted, notably that the scattering length of the external water has remained stable over a period of years.
+

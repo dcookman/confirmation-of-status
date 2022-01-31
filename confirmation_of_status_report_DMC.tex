@@ -1,0 +1,23 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{main}
+% \addbibresource{full.bib}
+
+\begin{document}
+\import{./}{tex_files/title_page}
+\clearpage
+
+\newpage
+\tableofcontents
+\pagenumbering{gobble}
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{2}
+
+\import{./}{tex_files/introduction}
+
+\import{./}{tex_files/beam_profiling}
+
+\import{./}{tex_files/thesis_outline}
+
+\end{document}
