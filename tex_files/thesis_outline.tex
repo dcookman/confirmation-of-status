@@ -8,6 +8,8 @@ Major assumption of SM has been that neutrinos are massless --- I'll explain why
 
 After that, I will outline the history of measuring neutrino oscillations, starting with Homestake \& John Bahcall, but then moving onto more recent notable experiments. With these observations in hand, I will describe the current phenomenological model we use for neutrino oscillations: the PMNS matrix with the MSW effect in the LMA regime. I will give more focus on the theory behind solar neutrino oscillations, given my research work on solar analysis. The Standard Solar Model will be introduced, along with what has yet to be measured fully: the solar metallicity problem. I will describe why only two oscillation parameters can reasonably measured in a solar neutrino experiment, and how these measurements can be complementary to reactor anti-neutrino measurements.
 
+Because I am already fairly confident in this theory, understanding the parts of this chapter will not take much more of my time. However, it will require a not-insignificant amount of finding and reading papers, and therefore is likely to take a few weeks to write up.
+
 \subsection{The SNO+ Detector}
 This is the main detector chapter. I will start with an overview of the high-level detector overview, covering its geometry and standard coordinate axis. I will endeavour to explain why certain design choices were made that enable the experiment. This will include a section on how the liquid scintillator works, along with Cerenkov light.
 
@@ -21,12 +23,16 @@ This leads into approaches to event reconstruction themselves: a brief descripti
 
 Finally for this chapter, I will describe the main experimental phases of the experiment, along with the physics plans for each (or what was achieved, as appropriate).
 
+Because of my work in SMELLIE calibration, as well as numerous shifts for detector monitoring, and being on-call as a so-called ``detector expert'', I have gained a fair amount of experience with the low-level details of the experiment to be described in this chapter. Therefore, beyond e.g. chasing down some of the subtleties of how certain calibration systems work, this chapter should not take up too much of my time. Therefore, it is likely to take a few weeks to write it up.
+
 \subsection{Optical Scattering Theory}
 Before we discuss calibrating the detector's optical scattering, we must first understand what it is as a physical phenomenon, and why it is important to understand. I will start by showing the impact of scattering on physics analyses, e.g. the influence on the hit-time spectrum.
 
 Then, I will move into the theoretical models for optical scattering in a fluid. We start with the Rayleigh scattering theory, which is devised for gases. The difference between Rayleigh and Mie scattering is discussed. This is expanded by the Einstein Smolokowsky density-fluctuation theory for materials. I will then look at how existing measurements of scattering compare to this theory, looking specifically at water and scintillator. Any limitations of the theory will be mentioned here, notably the impact of hydrogen bonding in water.
 
 Finally, I will describe how scattering is modelled in RAT for both the water and scintillator, and also the extent to which theoretical uncertainties described above impact my analysis.
+
+I will need to do some further background reading on some of the theory to be described here before writing up. Hopefully though this chapter can be written up in a few weeks.
 
 \subsection{The SMELLIE Calibration System}
 I will start this chapter by giving an overview for how the SMELLIE calibration system works: firing collimated laser light into the detector to observe scattering. Analysis is focused on measuring this scattering, ideally the double differential scattering cross-section as a function of wavelength and scattering angle. In addition, as the detector's optics changes through different phases of operation, SMELLIE can be used for monitoring purposes.
@@ -35,10 +41,58 @@ I will then give a description of the hardware used for SMELLIE. This includes t
 
 All of this hardware is controlled by software, and I will cover how this works at a high level. I will also cover how commissioning of the SMELLIE system works, and why it is necessary.
 
+I have a very strong understanding of this calibration system, so much of the writing of this chapter should be straightforward. However, if installing the new SMELLIE hardware becomes possible that will likely take up to a month to complete. Commissioning of SMELLIE has already been achieved when the scintillator fill was completed, but whenever the optical phase changes notably (e.g. after the addition of bisMSB into the detector), and certainly after any hardware upgrades, this commissioning will need to happen again. Thanks to an updated commissioning procedure, if we need to do this again it should hopefully be a faster process. The writing of this chapter should take about a month, given the need to talk about commissioning.
+
 \subsection{Simulating SMELLIE Events}
-This is the content covered in the main body of this report. Some final work need to be added to this section - one fibre's beam profile still needs to be generated, for example. This should take at most another month of time. Some details will be further expanded in the thesis version of this chapter, such as how a latching problem in the detector's electronics during the water-phase required using a certain `$t_2$ correction' method.
+This is the content covered in the main body of this report. Some final work need to be added to this section - one fibre's beam profile still needs to be generated, for example. This should take at most another month of time. Some details will be further expanded in the thesis version of this chapter, such as how a trigger jitter in the detector's electronics during the water-phase required using a certain `$t_2$ correction' method. Given that this report constitutes a first draft of this chapter, it will hopefully take less time to write this chapter in-place: possibly only a couple of weeks.
 
 \subsection{Scintillator-phase Scattering Analysis}
 \subsubsection{Extinction-length Analysis}
 A significant discrepancy between MC and data was observed in the number of photons observed at different PPO concentrations by others in the collaboration. This seems to be because of a change in the scintillator's extinction length from expectations at short wavelengths. This can be measured in-situ by SMELLIE! I will go over the details of how one could theoretically make this measurement of the scintillator's extinction length as a function of wavelength. Here is where any assumptions made in the subsequent analysis will be noted, notably that the scattering length of the external water has remained stable over a period of years.
 
+Core to this analysis is a set of time cuts for sets of certain regions of PMTs. Because of the trigger jitter problem noted above, determining the time residual of a hit is somewhat different between the water and scintillator phases. The selection of these regions is discussed here also. Then, a dry-run of the analysis will be performed on MC at a variety of extinction lengths, demonstrating the approaches' validity.
+
+This approach will then be applied to actual SMELLIE data; I will show the conversion from raw hit information into extinction length values. Then, the set of data quality cuts made will be outlined. The possible origins of uncertainty will be explained, and how statistical uncertainty has been propagated onto the final values. Using MC as a guide, I will make a correction for the difference in time residual calculation between scintillator and water. The final results will be shown, and comments made: how does it compare to the existing optics model, and other measurements that were made of the scintillator? What other conclusions can be made?
+
+Much of this analysis has already been achieved. The MC dry-run, time residual difference correction, and final analysis of the data has yet to be performed. I expect this to take at most a month more of time for research, and a couple weeks for writing up.
+
+\subsubsection{Internal Scintillator Analysis}
+This chapter is extending analyses started by previous students Esther Turner \& Krishanu Majumdar. I will start by summarising briefly their analysis approaches, namely that of finding scattered light within a triangular region of the time residual vs. $\alpha$ space of hits for a SMELLIE subrun. An example plot will be shown made from tracked MC, where I will go through the salient features of the plot, and why this leads to the existing analysis approach. I will also explain its challenges: dependence on lots of MC, and the major systematic of beam profiling. Scintillator analysis has a major additional challenge compared to their work on the water-phase, namely that scintillator re-emission is a major background to scattered light.
+
+As a start, I will run a mildly-updated version of the existing analysis process on the water-phase data, now using the new SMELLIE generator and beam profile. From this, I will be able to obtain updated scattering length values for the detector water. I will obtain uncertainties in this result, especially from the beam profiles. Even though the water-phase is finished and analyses from it almost fully-complete, for SMELLIE it is a useful starting point before moving onto scintillator.
+
+As proof of this fact, I will then try the exact same approach on scintillator, just to see how well it fares. The likely scenario is that it doesn't work nearly as well, due to all of the scintillator re-emission! Our best hope for discrimination between scattering and re-emission of photons is the difference in their angular distributions: re-emission is isotropic, whereas Rayleigh scattering very much isn't. We can try to observe this difference by attempting to reconstruct the paths of photons that are scattering candidates. Former project student Chloe Ransom developed a geometric method for this reconstruction, which I will take advantage of. I will obtain reconstructed scattering position and angle plots for MC, split by the possible optical processes. Hopefully, we will observe a separation between internal scattering and re-emission that can be taken advantage of, and hence lead us to a more effective method for scattering length calculation. With this new method in hand, I will apply it to the MC example I have already shown to derive its scattering length.
+
+Given this new method, I will then apply it to a scintillator data set, and see what results are obtained in terms of scattering length. I will talk about where the major sources of uncertainty arise from, and how this fits into the extinction length measurements made of the scintillator. I will finish by discussing further improvements to the method that could still be made.
+
+Much of this analysis has yet to be done. I have already run a form of the existing analysis on water-phase data, but am getting results I don't fully understand and suspect will need to debug. Applying the existing method to scintillator has not been performed yet. Some of the infrastructure for scattering photon path reconstruction has already been implemented, but not yet tested. Certainly the new method has not been developed yet or implemented. ALl of this research is liable to take possibly 5 months of time to complete to a satisfactory standard. Writing up this section will likely take a month to complete.
+
+\subsection{Solar Neutrino Oscillation Analysis in Scintillator Phase}
+\subsubsection{Sensitivity Study}
+I will start by reminding the reader of how a solar neutrino oscillation measurement works in general: one observes solar neutrino events in the detector at different energies, and the solar oscillation parameters will change the expected shape and magnitude of the events seen as a function of energy.
+
+Next, I will give an overview of the work done by former colleague Javi Caravaca on this topic for SNO+: a background-free sensitivity study over 5 years of scintillator, keeping the solar flux fixed. Javi also combined this result with similar results from the collaboration's complementary reactor anti-neutrino oscillation analysis.
+
+Given this context, I will go over the major improvements that are important for both obtaining a more realistic sensitivity study, but also a conversion into an actual analysis on data. I then discuss all of the major backgrounds relevant to this analysis, and their production mechanisms.
+
+Once described, I will start explaining the low-level approach to the analysis: using production MC of all the relevant background and signal processes, with initial expectation rates for each process. I will make a note here of how the constraint on the $^{8}B$ solar flux has a major impact on the final analysis, an indication of further discussion that will be had shortly. Then, I will explain the various cuts chosen to minimise background: energy, fiducial volume, BiPo and external classifiers, etc. From this, the final post-cut PDFs for each process are obtained, as a function of energy and position.
+
+From this, I will explain how Asimov data sets are made, and how the next stage of the analysis will work: the 2D oscillation parameter space is scanned over, and at each point the MC PDFs are fit to the Asimov data by varying their normalisations. From each fit a maximum log likelihood is obtained, which can then be plotted for each point of the 2D parameter space. One then obtains 2D likelihood contours from this, which can be different based upon whether one uses a Frequentist or Bayesian approach. By marginalising or profiling this likelihood space, one leads to estimates of each of the oscillation parameters, with associated confidence/credible intervals as appropriate.
+
+Given all of this setup, I will then show the results under different assumptions: varying the solar flux constraints being used, background levels, and the impact of varying cut points. The detector phase will also likely have an impact: namely how different PPO levels and the inclusion of Te-phase data might impact results. I will endeavour to see the impact of the energy scale systematic uncertainty on results.
+
+Much of the software framework required for this analysis has already been written; that being said, more will need to be made. I have already confirmed how a basic background-free study is impacted by the solar flux constraint. Handling the backgrounds sensibly of course will take time: I expect this section will take up to 6 months of research time to complete, followed by a month of writing up.
+
+\subsubsection{First Analysis with Scintillator Data}
+I will start this section by discussing the data set to be used for this analysis, noting the work that the Run Selection working group does in this regards. Following this, I will make some basic data quality checks, and then describe the data cleaning that is necessary in an analysis on actual data: things that are known not to be modelled in MC. Once those checks have been made, I describe the final production MC being used to produce PDFs for this analysis, and the final cuts chosen. If any blinding procedures have been decided to be added, I will describe them here also.
+
+Unlike in MC, another subtlety of analysis on data is the calculation of livetime, especially given cuts such as the muon veto which remove detector livetime. I will then also explain the actual rates measured for certain background processes to be used as fit constraints, performing side-band studies where relevant.
+
+With all of that out of the way, the machinery should be in place to perform the analysis on the actual data. I will show the results, and discuss to what degree they are sensible. If there is time, I will perform a preliminary combination of the solar and reactor anti-neutrino oscillation analyses, to see how they combine.
+
+I will finish by summarising the work done in this analysis so far, and what work remains (in addition to the taking of more data!) in improving the analysis. I should be able to predict how better backgrounds and more live-time improve our results.
+
+Most of the software infrastructure in this section is being used wholesale from the previous one, for obvious reasons. As a result, the challenges here will be all data-specific ones: applying the data-specific cuts, handling any data-MC discrepancies that may crop up, and analysing the results. I expect this to take about two months of my time, followed by a month of writing up.
+
+\subsection{Conclusions}
+This is the final chapter, and will be a short one. It will summarise briefly the work done in the thesis, now with the understanding that the reader will likely have read most of it! This is subtly different from the abstract of the thesis. Of course, until I have written the rest of the thesis, I cannot really write this section properly, but once the rest is complete both this and the abstract can be written within a day or so!
