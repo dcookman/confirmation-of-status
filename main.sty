@@ -20,12 +20,20 @@
 \usepackage[
     backend=biber,
     maxnames=4,
+    % citestyle=numeric-comp,
+    % sorting=none,
     style=phys,
+    % language=en,
+    % clearlang=true,
+    % style=chem-angew,
     bibencoding=utf8
 ]{biblatex}
+\AtEveryBibitem{%
+  \clearlist{language}%
+}
 %\bibliographystyle{ieeetr}
 %\setlength{\parindent}{0cm}
-
+\usepackage{hyperref}
 % Figure formatting
 \usepackage[font=small]{caption}
 \usepackage{subcaption}
